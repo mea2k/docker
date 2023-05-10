@@ -16,7 +16,7 @@
 
 4. Подключитесь к контейнеру _first_node_ с помощью exec и создайте текстовый файл любого содержания в /var/first/data
   
-    a) проверка сожержимого папки в контейнере _first_node_
+    a) проверка содержимого папки в контейнере _first_node_
     ```
     docker exec first_node ls /var/first/data
 
@@ -25,7 +25,7 @@
 
     `docker exec first_node touch /var/first/data/first.txt`
 
-    c) проверка сожержимого папки в контейнере _first_node_
+    c) проверка содержимого папки в контейнере _first_node_
     ```
     docker exec first_node ls /var/first/data
       first.txt
@@ -39,7 +39,7 @@ docker exec first_node ls /var/first/data
 ```
 6. Подключитесь к контейнеру _second_node_ с помощью exec и получите список файлов в директории /var/second/data, выведете на экран содержимое файлов
 
-    a) проверка сожержимого папки в контейнере _second_node_
+    a) проверка содержимого папки в контейнере _second_node_
     ```
     docker exec second_node ls /var/second/data
       first.txt
@@ -50,7 +50,7 @@ docker exec first_node ls /var/first/data
     `docker exec second_node sh -c "echo 'hallo from second_node' > /var/second/data/first.txt
   `
 
-    c) проверка сожержимого файла _first.txt_ в контейнере _first_node_
+    c) проверка содержимого файла _first.txt_ в контейнере _first_node_
     ```
     docker exec first_node cat /var/first/data/first.txt
       hallo from second_node
